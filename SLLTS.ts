@@ -43,7 +43,7 @@ class SLL
 
 		while(trvPtr != null)
 		{
-			console.log(trvPtr.val+"->");
+			console.log(trvPtr.val);
 			trvPtr = trvPtr.next;
 		}
 	}
@@ -68,17 +68,59 @@ class SLL
 		}
 
 		trvEnd.next = trvEnd.next.next;
+	}
 
+	public InserLast(num : number)
+	{
+		if(this.headPtr.next == null)
+		{
+			this.headPtr.next = new node(num);
+		}
+
+		let trvEnd : node = this.headPtr;
+
+		while(trvEnd.next != null)
+		{
+			trvEnd.next = new node(num);
+		}
+	}
+
+	public DeleteFirst()
+	{
+		this.headPtr = this.headPtr.next;
 	}
 }
 
 let tsobj : SLL = new SLL();
 
-tsobj.InsertFirst(50);
-tsobj.InsertFirst(40);
-tsobj.InsertFirst(30);
-tsobj.InsertFirst(20);
-tsobj.InsertFirst(10);
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+tsobj.InsertFirst(Math.random()*Math.random());
+
 
 tsobj.DisplayList();
 
